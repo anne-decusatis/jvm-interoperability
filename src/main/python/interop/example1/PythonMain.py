@@ -4,9 +4,9 @@ from interop.example1.JavaMain import main as jmain
 # sbt:interop> runMain PythonMain$py
 
 def main():
-    print("Initializing python!")
+    print("Initializing Python!")
     jmain([])
-    print("Exiting python!")
+    print("Exiting Python!")
 
 if __name__ == "__main__":
     main()
