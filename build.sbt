@@ -12,7 +12,8 @@ resolvers += DefaultMavenRepository
 libraryDependencies ++= Seq(
   "org.python" % "jython" % "2.7.0",
   "org.clojure" % "clojure" % "1.10.0",
-  "org.jetbrains.kotlin" % "kotlin-stdlib" % "1.3.21"
+  "org.jetbrains.kotlin" % "kotlin-stdlib" % "1.3.21",
+  "org.jruby" % "jruby-complete" % "9.2.6.0"
 )
 
 enablePlugins(JythonPlugin)
