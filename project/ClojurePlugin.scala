@@ -5,7 +5,7 @@ import sbt._
 
 object ClojurePlugin extends AutoPlugin {
 
-  private object ClojureDefaults extends Keys {
+  private object ClojureDefaults extends ClojureKeys {
     val settings = Seq(
       clojureVersion := "1.10.0",
       libraryDependencies ++= Seq[ModuleID](
@@ -14,7 +14,7 @@ object ClojurePlugin extends AutoPlugin {
     )
   }
 
-  object clojure extends Keys {
+  object clojure extends ClojureKeys {
     val settings = Seq(ivyConfigurations += Config) ++ ClojureDefaults.settings ++ Seq(
       clojureSource in Compile := (sourceDirectory in Compile).value / "clojure",
       unmanagedResourceDirectories in Compile += {(clojureSource in Compile).value},

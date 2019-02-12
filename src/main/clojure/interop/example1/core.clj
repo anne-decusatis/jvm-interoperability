@@ -2,4 +2,8 @@
 
 (defn -main
   "I can say 'Hello World'."
-  ([] (println "Initializing Clojure!\nExiting Clojure!")))
+  ([] (println "Initializing Clojure!")
+   (interop.example1.KotlinMainKt/main)
+   (println "Exiting Clojure!")
+   )
+  )

@@ -4,7 +4,7 @@ import java.io.File
 
 import sbt._
 
-trait Keys {
+trait ClojureKeys {
 
   lazy val Config = config("clojure") extend(Compile) hide
   lazy val clojureVersion = settingKey[String]("Clojure version")
@@ -13,7 +13,7 @@ trait Keys {
 
 }
 
-trait TestKeys extends Keys {
+trait TestKeys extends ClojureKeys {
   override lazy val Config = config("test-clojure") extend(Test) hide
 }
 
